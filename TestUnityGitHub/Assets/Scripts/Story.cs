@@ -18,9 +18,11 @@ public class Story : MonoBehaviour
         currentActivePlayer = player;
         playerAction = currentActivePlayer.GetComponent<PlayerAction>();
         Debug.Log("PlayerAction started");
-        StartCoroutine(spawn(spawnPoints[0]));
 
-        StartCoroutine(loadChair());
+        StartCoroutine(startWalking());
+
+        //StartCoroutine(spawn(spawnPoints[0]));
+        //StartCoroutine(loadChair());
     }
 
     int count = 0;
@@ -28,10 +30,10 @@ public class Story : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        count++;
+        //count++;
 
-        if(count == 500)
-            StartCoroutine(spawn(spawnPoints[1]));
+        //if(count == 500)
+            //StartCoroutine(spawn(spawnPoints[1]));
     }
 
     private IEnumerator startWalking()
