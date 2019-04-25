@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Text;
+using UnityEngine;
 
 namespace JWT
 {
@@ -55,6 +56,9 @@ namespace JWT
 
             byte[] headerBytes = Encoding.UTF8.GetBytes(JsonSerializer.Serialize(header));
             byte[] payloadBytes = Encoding.UTF8.GetBytes(JsonSerializer.Serialize(payload));
+
+            //Debug.Log("headerBytes: "+ headerBytes);
+            //Debug.Log("payloadBytes: " + payloadBytes);
 
             segments.Add(Base64UrlEncode(headerBytes));
             segments.Add(Base64UrlEncode(payloadBytes));
