@@ -1,14 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Text;
+using Newtonsoft.Json;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.UI;
 //using UnityEngine.UI;
 
 public class WebRequest : MonoBehaviour
 {
     private string ENDPOINT = "https://dl-web.wright.edu/lcg/api/data";
-    //public Text responseText;
+    public Text responseText;
 
     // Start is called before the first frame update
     void Start()
@@ -35,17 +37,20 @@ public class WebRequest : MonoBehaviour
 
         var payload = new Dictionary<string, object>()
         {
-            { "sid", sessionID },
+            { "sid", sessionID.ToString() },
         };
-        string token = encode(payload);
-        //string decodedPayload = decode(token);
-        //Debug.Log("decodedPayload: " + decodedPayload);
+        string token = encode(sessionID.ToString());
+        string decodedPayload = decode(token);
+        Debug.Log("decodedPayload: " + decodedPayload);
 
         // Add a custom header to the request.
         // In this case a basic authentication to access a password protected resource.
         headers["Authorization"] = token;
 
         WWW request = new WWW(ENDPOINT, rawData, headers);
+
+        Debug.Log("Request: www request: " + request);
+
         StartCoroutine(OnResponse(request));
     }
 
@@ -53,11 +58,11 @@ public class WebRequest : MonoBehaviour
     {
         yield return req;
 
-        //responseText.text = req.text;
+        responseText.text = req.text;
         Debug.Log("Response: "+ req.text);
     }
     
-    private string encode(Dictionary<string, object> payload)
+    private string encode(object payload)
     {
         var secretKey = "socialdeterminants";
         string token = JWT.JsonWebToken.Encode(payload, secretKey, JWT.JwtHashAlgorithm.HS256);
@@ -89,38 +94,19 @@ public class WebRequest : MonoBehaviour
         WWWForm form = new WWWForm();
         form.AddField("did", SystemInfo.deviceUniqueIdentifier);
 
-        using (UnityWebRequest www = UnityWebRequest.Post("https://dl-web.wright.edu/lcg/api/session", form))
-        {
-            yield return www.SendWebRequest();
+        Dictionary<string, string> headers = form.headers;
+        byte[] rawData = form.data;
 
-            if (www.isNetworkError || www.isHttpError)
-            {
-                Debug.Log(www.error);
-            }
-            else
-            {
-                Debug.Log("POST successful!");
-                StringBuilder sb = new StringBuilder();
-                foreach (System.Collections.Generic.KeyValuePair<string, string> dict in www.GetResponseHeaders())
-                {
-                    sb.Append(dict.Key).Append(": \t[").Append(dict.Value).Append("]\n");
-                }
+        WWW www = new WWW("https://dl-web.wright.edu/lcg/api/session", rawData, headers);
+        yield return www;
+        Debug.Log("POST successful!");
 
-                // Print Headers
-                Debug.Log(sb.ToString());
+        // Print Body
+        Debug.Log(www.text);
+        responseText.text = www.text;
 
-                // Print Body
-                Debug.Log(www.downloadHandler.text);
-
-                //sessionID = www.text.ToString();
-
-                //Debug.Log("Session ID:"+sessionID);
-
-                //Request(www.text.ToString());
-            }
-        }
-
-        
+        Dictionary<string, object> sessionResponse = JsonConvert.DeserializeObject<Dictionary<string, object>>(www.text);
+        Request((string)sessionResponse["sid"]);
         
     }
 
