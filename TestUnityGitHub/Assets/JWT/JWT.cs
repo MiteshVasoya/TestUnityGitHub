@@ -55,7 +55,7 @@ namespace JWT
             };
 
             byte[] headerBytes = Encoding.UTF8.GetBytes(JsonSerializer.Serialize(header));
-            byte[] payloadBytes = Encoding.UTF8.GetBytes(JsonSerializer.Serialize(payload));
+            byte[] payloadBytes = Encoding.UTF8.GetBytes((string)payload);
 
             //Debug.Log("headerBytes: "+ headerBytes);
             //Debug.Log("payloadBytes: " + payloadBytes);
@@ -143,7 +143,7 @@ namespace JWT
                 var decodedCrypto = Convert.ToBase64String(crypto);
                 var decodedSignature = Convert.ToBase64String(signature);
 
-                Verify(decodedCrypto, decodedSignature, payloadJson);
+                //Verify(decodedCrypto, decodedSignature, payloadJson);
             }
 
             return payloadJson;
