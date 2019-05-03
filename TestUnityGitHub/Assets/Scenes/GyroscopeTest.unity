@@ -784,7 +784,6 @@ GameObject:
   - component: {fileID: 1020005506}
   - component: {fileID: 1020005505}
   - component: {fileID: 1020005504}
-  - component: {fileID: 1020005507}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -857,23 +856,6 @@ Transform:
   m_Father: {fileID: 1200554967}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1818360609 &1020005507
-RotationConstraint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1020005503}
-  m_Enabled: 1
-  m_Weight: 1
-  m_RotationAtRest: {x: 45, y: 0, z: 0}
-  m_RotationOffset: {x: 45, y: 0, z: 0}
-  m_AffectRotationX: 1
-  m_AffectRotationY: 1
-  m_AffectRotationZ: 1
-  m_IsContraintActive: 0
-  m_IsLocked: 0
-  m_Sources: []
 --- !u!1001 &1200554954
 PrefabInstance:
   m_ObjectHideFlags: 0

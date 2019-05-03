@@ -18,10 +18,10 @@ public class GyroControl2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        cameraContainer = new GameObject("Camera_Container");
-        cameraContainer.transform.SetParent(gyroscopeGo.transform.parent);
-        cameraContainer.transform.position = gyroscopeGo.transform.position;
-        gyroscopeGo.transform.SetParent(cameraContainer.transform);
+        cameraContainer = new GameObject("Camera Container");
+        cameraContainer.transform.SetParent(camera.transform.parent);
+        cameraContainer.transform.position = camera.transform.position;
+        camera.transform.SetParent(cameraContainer.transform);
 
         EnableGyro();
     }
@@ -34,8 +34,8 @@ public class GyroControl2 : MonoBehaviour
             gyroscope = Input.gyro;
             gyroscope.enabled = true;
 
-            cameraContainer.transform.rotation = Quaternion.Euler(90f, 90f, -90f);
-            rot = new Quaternion(0, 0, 1, 0);
+            //cameraContainer.transform.rotation = Quaternion.Euler(90f, 90f, -90f);
+            //rot = new Quaternion(0, 0, 1, 0);
 
             gyroEnabled = true;
         }
@@ -51,9 +51,9 @@ public class GyroControl2 : MonoBehaviour
     {
         if (gyroEnabled)
         {
-            gyroscopeGo.transform.localRotation = gyroscope.attitude * rot;
-            //cameraContainer.transform.Rotate(0, -gyroscope.rotationRateUnbiased.y, 0);
-            //camera.transform.Rotate(-gyroscope.rotationRateUnbiased.x, -gyroscope.rotationRateUnbiased.y, 0);
+            //gyroscopeGo.transform.localRotation = gyroscope.attitude * rot;
+            cameraContainer.transform.Rotate(0, -gyroscope.rotationRateUnbiased.y, 0);
+            camera.transform.Rotate(-gyroscope.rotationRateUnbiased.x, 0, 0);
         }
     }
 
