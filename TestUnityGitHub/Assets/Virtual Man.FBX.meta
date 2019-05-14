@@ -1,0 +1,219 @@
+fileFormatVersion: 2
+guid: f62daa33c4c3f6f489e4c7910c20e6a8
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Camera001
+    100002: Camera001.Target
+    100004: Camera002
+    100006: Camera002.Target
+    100008: Camera003
+    100010: Camera003.Target
+    100012: Camera004
+    100014: Camera004.Target
+    100016: Virtual Man
+    100018: //RootNode
+    100020: VRayLight001
+    100022: VRayLight001.Target
+    100024: VRayLight002
+    100026: VRayLight002.Target
+    100028: VRayLight003
+    100030: VRayLight003.Target
+    400000: Camera001
+    400002: Camera001.Target
+    400004: Camera002
+    400006: Camera002.Target
+    400008: Camera003
+    400010: Camera003.Target
+    400012: Camera004
+    400014: Camera004.Target
+    400016: //RootNode
+    400018: Virtual Man
+    400020: VRayLight001
+    400022: VRayLight001.Target
+    400024: VRayLight002
+    400026: VRayLight002.Target
+    400028: VRayLight003
+    400030: VRayLight003.Target
+    2000000: Camera001
+    2000002: Camera002
+    2000004: Camera003
+    2000006: Camera004
+    2100000: Virtual Man
+    2300000: Virtual Man
+    3300000: Virtual Man
+    4300000: Virtual Man
+    7400000: Take 001
+    9500000: //RootNode
+    2186277476908879412: ImportLogs
+    6000828045688606266: Camera001
+    6000828045688606268: Camera002
+    6000828045688606270: Camera003
+    6000828045688606272: Camera004
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 1
+    motionNodeName: 
+    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
+      human bone 'Hips' not found\n"
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.0254
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton:
+    - name: Virtual Man(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Virtual Man
+      parentName: Virtual Man(Clone)
+      position: {x: 0.000014679336, y: 0.64336497, z: 0.0000038757325}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: VRayLight001
+      parentName: Virtual Man(Clone)
+      position: {x: -0, y: 1.8807273, z: 2.041888}
+      rotation: {x: -0.25976157, y: 0, z: -0, w: 0.9656728}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+    - name: VRayLight001.Target
+      parentName: Virtual Man(Clone)
+      position: {x: -0, y: 0.6965229, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Camera001
+      parentName: Virtual Man(Clone)
+      position: {x: 0.000081106286, y: 0.6359081, z: 1.8845731}
+      rotation: {x: -0.000000077068464, y: -0.7071068, z: 0.00000007706845, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Camera001.Target
+      parentName: Virtual Man(Clone)
+      position: {x: 0.000081194776, y: 0.63590795, z: 0.9955724}
+      rotation: {x: -0.00000015695824, y: -0.00000004977171, z: -6.035723e-15, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Camera002
+      parentName: Virtual Man(Clone)
+      position: {x: -0.00026362357, y: 0.64143103, z: -1.7071353}
+      rotation: {x: 0.00000019996908, y: 0.7071066, z: 0.0000001999692, w: 0.70710707}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Camera002.Target
+      parentName: Virtual Man(Clone)
+      position: {x: -0.00026469913, y: 0.6414301, z: 0.0059769605}
+      rotation: {x: -5.821059e-14, y: 1, z: 0.00000027616753, w: 0.00000031391647}
+      scale: {x: 1, y: 1, z: 1}
+    - name: VRayLight002
+      parentName: Virtual Man(Clone)
+      position: {x: -0, y: 1.8807273, z: -2.041888}
+      rotation: {x: 7.5036214e-17, y: 0.9656728, z: 0.25976157, w: -4.3224594e-17}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+    - name: VRayLight002.Target
+      parentName: Virtual Man(Clone)
+      position: {x: -0, y: 0.6965229, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Camera003
+      parentName: Virtual Man(Clone)
+      position: {x: 1.8605839, y: 0.6727862, z: 0.0014067622}
+      rotation: {x: 8.881785e-16, y: -0.00000005960465, z: -0.00000002603843, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Camera003.Target
+      parentName: Virtual Man(Clone)
+      position: {x: 0.0000011627197, y: 0.6727863, z: 0.0014070653}
+      rotation: {x: 0.000000057601167, y: 0.7071067, z: -0.000000057601156, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: VRayLight003
+      parentName: Virtual Man(Clone)
+      position: {x: 1.7371026, y: 1.8807273, z: -1.5571458}
+      rotation: {x: -0.094886556, y: 0.888027, z: 0.21248545, w: 0.3965534}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+    - name: VRayLight003.Target
+      parentName: Virtual Man(Clone)
+      position: {x: -0, y: 0.6965229, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Camera004
+      parentName: Virtual Man(Clone)
+      position: {x: 0.77381724, y: 1.7232869, z: 1.3039315}
+      rotation: {x: -0.1401542, y: -0.47523978, z: 0.24570535, w: 0.8331464}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Camera004.Target
+      parentName: Virtual Man(Clone)
+      position: {x: -0.021678813, y: 0.71367747, z: -0.04129845}
+      rotation: {x: -0.27284387, y: 0.2530782, z: 0.074635945, w: 0.9251687}
+      scale: {x: 1, y: 1.0000001, z: 0.99999994}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

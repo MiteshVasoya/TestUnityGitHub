@@ -15,7 +15,8 @@ public class WebRequest : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(LoadWebSession());
+        //StartCoroutine(LoadWebSession());
+        Request("1234");
     }
 
     // Update is called once per frame
@@ -45,7 +46,7 @@ public class WebRequest : MonoBehaviour
 
         // Add a custom header to the request.
         // In this case a basic authentication to access a password protected resource.
-        headers["Authorization"] = token;
+        headers["Authorization"] = "Bearer " + token;
 
         WWW request = new WWW(ENDPOINT, rawData, headers);
 
