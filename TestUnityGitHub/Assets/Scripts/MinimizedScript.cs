@@ -10,13 +10,15 @@ public class MinimizedScript : MonoBehaviour
     void Start()
     {
         Debug.Log("Start");
+        Application.OpenURL("https://www.google.com");
     }
     
     private void OnApplicationFocus(bool focus)
     {
         count++;
         Debug.Log("OnApplicationFocus: " + focus);
-        if (!focus && count == 2)
+        Debug.Log("count: " + count);
+        if (!focus)
         {
             Application.Quit();
         }
