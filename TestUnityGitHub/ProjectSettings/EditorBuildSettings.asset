@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/JWTScene.unity
-    guid: a3e2d5dc395b3454ca29eb51d3bf344c
+    path: Assets/Scenes/MinimizedScene.unity
+    guid: c54d1fc574d529d449bbbefa4e9503af
   m_configObjects: {}
